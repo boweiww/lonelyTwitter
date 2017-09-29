@@ -12,12 +12,23 @@ import java.util.Date;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
+//packages classes fields methods
+
+/**
+ * Allows a tweet from uer input to be stored and displayed in the app.
+ * The user inputs text with the andtoid keypad and the text is stored in file using a save button.
+ *
+* @author
+* @version
+* @see
+* @since
+*/
 
 public class LonelyTwitterActivity extends Activity {
 
@@ -26,6 +37,17 @@ public class LonelyTwitterActivity extends Activity {
 	private ListView oldTweetsList;
 	
 	/** Called when the activity is first created. */
+	/**
+	 * Creates and visualizes the app's UI, including the body of saved tweets and the save button.
+	 *
+	 * @author
+	 * @version
+	 * @param
+	 * @return
+	 * @throws
+	 * @see
+	 * @since
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,40 +58,40 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
 
 		saveButton.setOnClickListener(new View.OnClickListener() {
+			/**
+			 * Gets the text from the tweet input and saves it to the body text file.
+			 *
+			 * @author
+			 * @version
+			 * @param
+			 * @return
+			 * @throws
+			 * @see
+			 * @since
+			 */
 
 			public void onClick(View v) {
-
-
-					Tweet tweet = new ImportantTweet("");
-					NormalTweet tweet1= new NormalTweet("");
-					try {
-						tweet.setMessage("Hello");
-					} catch (TweetToollongException e) {
-						//e.printstack trace
-					}
-					ArrayList<Tweet> tweets = new ArrayList<Tweet>();
-					tweets.add(tweet);
-					tweets.add(tweet1);
-					for (Tweet t:tweets){
-						Log.d("Some Tag"," The is important method on this object returns" +t.isImportant());
-
-					}
-					ArrayList<Tweetable> tweetables = new ArrayList<Tweetable>();
-					tweetables.add(tweet);
-					tweetables.add(tweet1);
-
-
-					setResult(RESULT_OK);
-					String text = bodyText.getText().toString();
-					saveInFile(text, new Date(System.currentTimeMillis()));
-					//finish();
-
+				setResult(RESULT_OK);
+				String text = bodyText.getText().toString();
+				saveInFile(text, new Date(System.currentTimeMillis()));
+				finish();
 
 			}
 		});
 	}
 
 	@Override
+	/**
+	 * Constructs an adapter to display a loaded string of tweets.
+	 *
+	 * @author
+	 * @version
+	 * @param
+	 * @return
+	 * @throws
+	 * @see
+	 * @since
+	 */
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
@@ -79,6 +101,18 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
+	/**
+	 * Consructs a string array to load the saved tweets from the saved tweets file, to
+	 * be displayed on startup.
+	 *
+	 * @author
+	 * @version
+	 * @param
+	 * @return
+	 * @throws
+	 * @see
+	 * @since
+	 */
 	private String[] loadFromFile() {
 		ArrayList<String> tweets = new ArrayList<String>();
 		try {
@@ -99,7 +133,18 @@ public class LonelyTwitterActivity extends Activity {
 		}
 		return tweets.toArray(new String[tweets.size()]);
 	}
-	
+
+	/**
+	 * Writes string text to a file.
+	 *
+	 * @author
+	 * @version
+	 * @param
+	 * @return
+	 * @throws
+	 * @see
+	 * @since
+	 */
 	private void saveInFile(String text, Date date) {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
