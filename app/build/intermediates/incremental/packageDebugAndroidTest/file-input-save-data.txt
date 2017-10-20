@@ -1,0 +1,9 @@
+#Internal package file, do not edit.
+#Thu Oct 19 19:08:37 MDT 2017
+1.file=/Users/frost/Downloads/lab7/lonelyTwitter/app/build/intermediates/transforms/dex/androidTest/debug/folders/1000/1f/main/classes.dex
+1.set=DEX
+0.file=/Users/frost/Downloads/lab7/lonelyTwitter/app/build/intermediates/res/resources-debug-androidTest.ap_/AndroidManifest.xml
+1.base=/Users/frost/Downloads/lab7/lonelyTwitter/app/build/intermediates/transforms/dex/androidTest/debug/folders/1000/1f/main
+0.base=/Users/frost/Downloads/lab7/lonelyTwitter/app/build/intermediates/res/resources-debug-androidTest.ap_
+0.set=ANDROID_RESOURCE
+count=2

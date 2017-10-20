@@ -1,0 +1,4 @@
+#Thu Oct 19 19:08:35 MDT 2017
+base.0=/Users/frost/Downloads/lab7/lonelyTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/frost/Downloads/lab7/lonelyTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
