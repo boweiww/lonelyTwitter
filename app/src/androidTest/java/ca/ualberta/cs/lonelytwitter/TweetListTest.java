@@ -4,7 +4,7 @@ import android.test.ActivityInstrumentationTestCase2;
 
 /**
  * Created by makepeac on 9/29/16.
- */
+ *///
 public class TweetListTest extends ActivityInstrumentationTestCase2 {
 
     public TweetListTest(){
